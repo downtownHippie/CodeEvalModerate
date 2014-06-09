@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainInspection", "ChainIns
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumToZero", "SumToZero\SumToZero.csproj", "{3787B5CD-68C6-4684-BF2A-F629560314EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeekForAnIntruder", "SeekForAnIntruder\SeekForAnIntruder.csproj", "{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -503,6 +505,16 @@ Global
 		{3787B5CD-68C6-4684-BF2A-F629560314EA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3787B5CD-68C6-4684-BF2A-F629560314EA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3787B5CD-68C6-4684-BF2A-F629560314EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

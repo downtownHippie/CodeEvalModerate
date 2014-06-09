@@ -47,13 +47,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\FalviusJosephus.exe" />
-    <Content Include="bin\Debug\FalviusJosephus.pdb" />
-    <Content Include="bin\Debug\FalviusJosephus.vshost.exe" />
     <Content Include="bin\Debug\input.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\FalviusJosephus.vshost.exe.manifest" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

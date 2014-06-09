@@ -48,9 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\input.txt" />
-    <Content Include="bin\Debug\PascalsTriangle.exe" />
-    <Content Include="bin\Debug\PascalsTriangle.pdb" />
-    <Content Include="bin\Debug\PascalsTriangle.vshost.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
