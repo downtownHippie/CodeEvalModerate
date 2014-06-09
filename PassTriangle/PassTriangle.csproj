@@ -47,8 +47,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\input2.txt" />
-    <Content Include="bin\Debug\input.txt" />
+    <Content Include="bin\Debug\inputFull.txt" />
+    <Content Include="bin\Debug\inputTest.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
