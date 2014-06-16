@@ -70,8 +70,6 @@ namespace FindASquare
                         continue;
                     else
                         Console.WriteLine("true");
-
-                    continue;
                     //for (int i = 0; i < points.Count; i++)
                     //{
                     //    Console.Write("({0},{1})", points[i].x, points[i].y);
