@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumToZero", "SumToZero\SumT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeekForAnIntruder", "SeekForAnIntruder\SeekForAnIntruder.csproj", "{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorCodeConverter", "ColorCodeConverter\ColorCodeConverter.csproj", "{0612D76D-CFA8-40B1-94D0-FD898819F8BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -515,6 +517,16 @@ Global
 		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{CAB5A0D2-6A0E-4B22-A021-05EE8078F9F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0612D76D-CFA8-40B1-94D0-FD898819F8BA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
