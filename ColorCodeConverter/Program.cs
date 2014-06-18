@@ -18,64 +18,37 @@ namespace ColorCodeConverter
                     string line = reader.ReadLine().Trim();
                     if (string.IsNullOrEmpty(line))
                         continue;
+                    //Console.WriteLine(line);
                     if (Regex.IsMatch(line, @"^HSL\((\d{1,3},){2}\d{1,3}\)$"))
                     {
-                        Console.Write("HSL: ");
+                        // https://github.com/imathis/hsl-picker/blob/master/assets/javascripts/modules/color.coffee
+                        //Console.Write("HSL: ");
                         string[] hsl = Regex.Split(line, @"^HSL\((\d{1,3}),(\d{1,3}),(\d{1,3})\)$");
-                        double h = Convert.ToDouble(hsl[1]) / 60;
+                        double h = Convert.ToDouble(hsl[1]) / 360;
                         double s = Convert.ToDouble(hsl[2]) / 100;
                         double l = Convert.ToDouble(hsl[3]) / 100;
-                        double c = (1 - Math.Abs(2 * l - 1) * s);
-                        double x = c * (1 - Math.Abs(h % 2 - 1));
-                        double m = l - (c / 2);
-                        int r = 0;
-                        int g = 0;
-                        int b = 0;
-                        if (0 <= h && h < 1)
-                        {
-                            r = (int)Math.Round(c + m);
-                            g = (int)Math.Round(x + m);
-                            b = (int)Math.Round(m);
-                        }
-                        else if (1 <= h && h < 2)
-                        {
-                            r = (int)Math.Round(x + m);
-                            g = (int)Math.Round(c + m);
-                            b = (int)Math.Round(m);
-                        }
-                        else if (2 <= h && h < 3)
-                        {
-                            r = (int)Math.Round(m);
-                            g = (int)Math.Round(c + m);
-                            b = (int)Math.Round(x + m);
-                        }
-                        else if (3 <= h && h < 4)
-                        {
-                            r = (int)Math.Round(m);
-                            g = (int)Math.Round(x + m);
-                            b = (int)Math.Round(c + m);
-                        }
-                        else if (4 <= h && h < 5)
-                        {
-                            r = (int)Math.Round(x + m);
-                            g = (int)Math.Round(m);
-                            b = (int)Math.Round(c + m);
-                        }
-                        else if (5 <= h && h < 6)
-                        {
-                            r = (int)Math.Round(c + m);
-                            g = (int)Math.Round(m);
-                            b = (int)Math.Round(x + m);
-                        }
+
+                        double q;
+                        if (l <= 0.5)
+                            q = l * (1 + s);
                         else
-                        {
-                            Console.WriteLine("something wonky: {0}", line);
-                            continue;
-                        }
+                            q = l + s - (l * s);
+
+                        double p = 2 * l - q;
+
+                        double rt = h + (1.0 / 3.0);
+                        double gt = h;
+                        double bt = h - (1.0 / 3.0);
+
+                        int r = (int)Math.Round(hueToRGB(p, q, rt) * 255);
+                        int g = (int)Math.Round(hueToRGB(p, q, gt) * 255);
+                        int b = (int)Math.Round(hueToRGB(p, q, bt) * 255);
+                        
                         Console.WriteLine("RGB({0},{1},{2})", r, g, b);
                     }
                     else if (Regex.IsMatch(line, @"^HSV\((\d{1,3},){2}\d{1,3}\)$"))
                     {
+                        // this is from wikipedia - EXCEPT for the "* 255" part!!! I added that
                         //Console.Write("HSV: ");
                         string[] hsv = Regex.Split(line, @"^HSV\((\d{1,3}),(\d{1,3}),(\d{1,3})\)$");
                         double h = Convert.ToDouble(hsv[1]) / 60;
@@ -141,7 +114,7 @@ namespace ColorCodeConverter
                     }
                     else if (Regex.IsMatch(line, @"^\((([01]\.[\d]{2}),){3}[01]\.[\d]{2}\)$"))
                     {
-                        //http://www.ginifab.com/feeds/pms/colorconverter.js
+                        // http://www.ginifab.com/feeds/pms/colorconverter.js
                         //Console.Write("CYMK: ");
                         string[] cymk = Regex.Split(line, @"^\(([01]\.\d{2}),([01]\.\d{2}),([01]\.\d{2}),([01]\.\d{2})\)$");
                         double C = Convert.ToDouble(cymk[1]);
@@ -156,7 +129,24 @@ namespace ColorCodeConverter
                     else
                         Console.WriteLine("Unknown color system: {0}", line);
                 }
-            Console.ReadLine();
+            //Console.ReadLine();
+        }
+
+        private static double hueToRGB(double p, double q, double h)
+        {
+            if (h < 0)
+                h++;
+            else if (h > 1)
+                h--;
+
+            if ((h * 6) < 1)
+                return p + (q - p) * h * 6;
+            else if ((h * 2) < 1)
+                return q;
+            else if ((h * 3) < 2)
+                return p + (q - p) * ((2.0 / 3.0) - h) * 6;
+            else
+                return p;
         }
     }
 }
